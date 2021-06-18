@@ -3,9 +3,17 @@
 
 namespace Smoren\Helpers;
 
-
+/**
+ * Класс для организации циклов
+ * @package Smoren\Helpers
+ */
 class LoopHelper
 {
+    /**
+     * @param array $arr
+     * @param callable $callback
+     * @return int
+     */
     public static function eachPair(array &$arr, callable $callback): int
     {
         $loopCount = 0;
