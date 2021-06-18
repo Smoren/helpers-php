@@ -6,3 +6,10 @@ Some helpers for different things
 ```
 composer require smoren/helpers
 ```
+
+### Unit testing
+```
+composer install
+./vendor/bin/codecept build
+./vendor/bin/codecept run unit tests/unit
+```
