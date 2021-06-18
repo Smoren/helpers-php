@@ -1,0 +1,64 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c7fca78c42b7333f29758cbf6e5856eb",
+    "packages": [
+        {
+            "name": "smoren/extended-exceptions",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Smoren/extended-exceptions-php.git",
+                "reference": "a3465eb571d0f20ec775b10e75512f162a448745"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Smoren/extended-exceptions-php/zipball/a3465eb571d0f20ec775b10e75512f162a448745",
+                "reference": "a3465eb571d0f20ec775b10e75512f162a448745",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Smoren\\ExtendedExceptions\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Smoren",
+                    "email": "ofigate@gmail.com"
+                }
+            ],
+            "description": "Extended exceptions",
+            "keywords": [
+                "exception"
+            ],
+            "support": {
+                "issues": "https://github.com/Smoren/extended-exceptions-php/issues",
+                "source": "https://github.com/Smoren/extended-exceptions-php/tree/1.0.0"
+            },
+            "time": "2020-11-24T13:40:08+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.2.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}
