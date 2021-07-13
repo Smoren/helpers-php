@@ -184,23 +184,4 @@ class ArrHelper
 
         return $valuesOnly ? array_values($result) : $result;
     }
-
-    /**
-     * @param array $items
-     * @param string $relationField
-     * @param $value
-     * @return array
-     */
-    public static function getRelatedItems(array $items, string $relationField, $value): array
-    {
-        $result = [];
-
-        foreach($items as $item) {
-            if($item[$relationField] === $value) {
-                $result[] = $item;
-            }
-        }
-
-        return $result;
-    }
 }
