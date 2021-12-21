@@ -64,7 +64,7 @@ class ArrHelper
      * @param callable|null $indexBy
      * @return array
      */
-    public static function group(array &$array, callable $groupBy, ?callable $indexBy = null): array
+    public static function group(Iterable &$array, callable $groupBy, ?callable $indexBy = null): array
     {
         $result = [];
         foreach($array as &$item) {
@@ -90,7 +90,7 @@ class ArrHelper
      * @param bool $saveKeys
      * @return array
      */
-    public static function filter(array& $array, callable $filter, bool $saveKeys = false): array
+    public static function filter(Iterable &$array, callable $filter, bool $saveKeys = false): array
     {
         $result = [];
 
@@ -113,7 +113,7 @@ class ArrHelper
      * @param callable $getValue
      * @return mixed|null
      */
-    public static function max(array& $array, callable $getValue)
+    public static function max(Iterable &$array, callable $getValue)
     {
         $maxValue = null;
         $result = null;
@@ -140,7 +140,7 @@ class ArrHelper
      * @param callable $getValue
      * @return mixed|null
      */
-    public static function min(array& $array, callable $getValue)
+    public static function min(Iterable &$array, callable $getValue)
     {
         $minValue = null;
         $result = null;
@@ -168,7 +168,7 @@ class ArrHelper
      * @param bool $valuesOnly
      * @return array
      */
-    public static function getUniqueValueEntries(array &$array, callable $getValue, bool $valuesOnly = false): array
+    public static function getUniqueValueEntries(Iterable &$array, callable $getValue, bool $valuesOnly = false): array
     {
         $result = [];
 

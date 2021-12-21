@@ -14,7 +14,7 @@ class LoopHelper
      * @param callable $callback
      * @return int
      */
-    public static function eachPair(array &$arr, callable $callback): int
+    public static function eachPair(Iterable &$arr, callable $callback): int
     {
         $loopCount = 0;
         $prevKey = null;

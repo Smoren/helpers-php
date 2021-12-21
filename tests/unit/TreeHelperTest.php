@@ -1,6 +1,6 @@
 <?php
 
-namespace app\tests\unit;
+namespace Smoren\Helpers\tests\unit;
 
 
 use Smoren\Helpers\TreeHelper;

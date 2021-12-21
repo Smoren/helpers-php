@@ -7,7 +7,7 @@ namespace Smoren\Helpers;
 class TreeHelper
 {
     public static function fromList(
-        array $list, string $idField = 'id',
+        Iterable $list, string $idField = 'id',
         string $parentIdField = 'parent_id', string $childrenContainerField = 'items'
     ): array
     {
