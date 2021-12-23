@@ -1,6 +1,6 @@
 <?php
 
-namespace Smoren\Helpers\tests\unit;
+namespace Smoren\Helpers\Tests\Unit;
 
 
 use Smoren\Helpers\LoopHelper;

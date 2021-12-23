@@ -20,7 +20,7 @@
   "autoload": {
     "psr-4": {
       "Smoren\\Helpers\\": "src",
-      "Smoren\\Helpers\\tests\\": "tests"
+      "Smoren\\Helpers\\Tests\\Unit\\": "tests/unit"
     }
   },
   "config": {
