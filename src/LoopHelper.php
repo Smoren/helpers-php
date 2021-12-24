@@ -19,17 +19,33 @@ class LoopHelper
         $loopCount = 0;
         $prevKey = null;
         $prevValue = null;
-        foreach($arr as $key => &$value) {
-            if($prevValue === null) {
+
+        if(is_array($arr)) {
+            foreach($arr as $key => &$value) {
+                if($prevValue === null) {
+                    $prevKey = $key;
+                    $prevValue = &$value;
+                    continue;
+                }
+
+                $callback($prevValue, $value, $prevKey, $key);
+                $loopCount++;
                 $prevKey = $key;
                 $prevValue = &$value;
-                continue;
             }
+        } else {
+            foreach($arr as $key => $value) {
+                if($prevValue === null) {
+                    $prevKey = $key;
+                    $prevValue = &$value;
+                    continue;
+                }
 
-            $callback($prevValue, $value, $prevKey, $key);
-            $loopCount++;
-            $prevKey = $key;
-            $prevValue = &$value;
+                $callback($prevValue, $value, $prevKey, $key);
+                $loopCount++;
+                $prevKey = $key;
+                $prevValue = &$value;
+            }
         }
 
         return $loopCount;
