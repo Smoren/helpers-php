@@ -37,14 +37,14 @@ class LoopHelper
             foreach($arr as $key => $value) {
                 if($prevValue === null) {
                     $prevKey = $key;
-                    $prevValue = &$value;
+                    $prevValue = $value;
                     continue;
                 }
 
                 $callback($prevValue, $value, $prevKey, $key);
                 $loopCount++;
                 $prevKey = $key;
-                $prevValue = &$value;
+                $prevValue = $value;
             }
         }
 
