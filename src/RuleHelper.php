@@ -56,7 +56,12 @@ class RuleHelper
                     return true;
                 }
                 break;
-            case 'between_strict':
+            case 'not in':
+                if(!in_array($value, $args)) {
+                    return true;
+                }
+                break;
+            case 'between strict':
                 if($value > $args[0] && $value < $args[1]) {
                     return true;
                 }
