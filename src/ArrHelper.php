@@ -184,4 +184,34 @@ class ArrHelper
 
         return $valuesOnly ? array_values($result) : $result;
     }
+
+    /**
+     * Returns true if array is associative else false
+     * @param array $input array to check
+     * @return bool result flag
+     */
+    public static function isAssoc(array $input): bool
+    {
+        if([] === $input) return false;
+        return array_keys($input) !== range(0, count($input) - 1);
+    }
+
+    /**
+     * Flattens an array
+     * @param array $arr array to flatten
+     * @return array flat array
+     */
+    public static function flatten(array $arr): array
+    {
+        $tmp = [];
+        foreach($arr as $val) {
+            if(is_array($val)) {
+                $tmp = array_merge($tmp, static::flatten($val));
+            } else {
+                $tmp[] = $val;
+            }
+        }
+
+        return $tmp;
+    }
 }
