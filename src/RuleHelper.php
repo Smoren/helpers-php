@@ -52,12 +52,12 @@ class RuleHelper
                 }
                 break;
             case 'in':
-                if(in_array($value, $args)) {
+                if(in_array($value, $args[0])) {
                     return true;
                 }
                 break;
             case 'not in':
-                if(!in_array($value, $args)) {
+                if(!in_array($value, $args[0])) {
                     return true;
                 }
                 break;
