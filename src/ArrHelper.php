@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Smoren\Helpers;
-
 
 use Smoren\ExtendedExceptions\BadDataException;
 

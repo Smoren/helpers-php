@@ -1,16 +1,15 @@
 <?php
 
-
 namespace Smoren\Helpers;
-
 
 class TreeHelper
 {
     public static function fromList(
-        Iterable $list, string $idField = 'id',
-        string $parentIdField = 'parent_id', string $childrenContainerField = 'items'
-    ): array
-    {
+        iterable $list,
+        string $idField = 'id',
+        string $parentIdField = 'parent_id',
+        string $childrenContainerField = 'items'
+    ): array {
         $result = [];
         $map = [];
 
@@ -20,7 +19,7 @@ class TreeHelper
         }
 
         foreach($map as &$item) {
-            if(isset($item[$parentIdField]) && $item[$parentIdField] !== null) {
+            if(isset($item[$parentIdField])) {
                 $map[$item[$parentIdField]][$childrenContainerField][] = &$item;
             } else {
                 $result[] = &$item;

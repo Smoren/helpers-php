@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Smoren\Helpers;
-
 
 class RuleHelper
 {
