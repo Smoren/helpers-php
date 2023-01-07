@@ -5,6 +5,8 @@ namespace Smoren\Helpers;
 /**
  * Class CastHelper
  * @package Smoren\Helpers
+ * @deprecated moved to smoren/type-tools as ObjectTypeCaster
+ * @see https://github.com/Smoren/type-tools-php#object-type-caster-1
  */
 class CastHelper
 {
