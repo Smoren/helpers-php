@@ -4,6 +4,7 @@ namespace Smoren\Helpers;
 
 class RuleHelper
 {
+
     /**
      * Checks rule for value
      * @param mixed $value value to check
@@ -11,7 +12,7 @@ class RuleHelper
      * @param array $args arguments for rule
      * @return bool
      */
-    public static function check($value, string $rule, array $args): bool
+    public static function evaluate($value, string $rule, array $args): bool
     {
         switch($rule) {
             case '=':
@@ -67,5 +68,20 @@ class RuleHelper
         }
 
         return false;
+    }
+
+    /**
+     * Checks rule for value
+     * @param mixed $value value to check
+     * @param string $rule rule for checking
+     * @param array $args arguments for rule
+     * @return bool
+     *
+     * @deprecated
+     * @see self::evaluate()
+     */
+    public static function check($value, string $rule, array $args): bool
+    {
+        return static::evaluate($value, $rule, $args);
     }
 }
