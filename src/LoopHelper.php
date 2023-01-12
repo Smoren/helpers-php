@@ -3,8 +3,8 @@
 namespace Smoren\Helpers;
 
 /**
- * Класс для организации циклов
- * @package Smoren\Helpers
+ * @deprecated use Single::pairwise() from markrogoyski/itertools-php
+ * @see https://github.com/markrogoyski/itertools-php#Pairwise
  */
 class LoopHelper
 {
